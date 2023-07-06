@@ -1,0 +1,30 @@
+#!/bin/sh
+
+data=${XDG_DATA_HOME:-$HOME/.local/share}
+state=${XDG_STATE_HOME:-$HOME/.local/state}
+config=${XDG_CONFIG_HOME:-$HOME/.config}
+cache=${XDG_CACHE_HOME:-$HOME/.cache}
+
+if [ -d "$config/nvim" ]; then
+  mv -v "$config/nvim" "$config/nvim.bak"
+else
+  echo "$config/nvim" does not exist.
+fi
+
+if [ -d "$data/nvim" ]; then
+  mv -v "$data/nvim" "$data/nvim.bak"
+else
+  echo "$data/nvim" does not exist.
+fi
+
+if [ -d "$state/nvim" ]; then
+  mv -v "$state/nvim" "$state/nvim.bak"
+else
+  echo "$state/nvim" does not exist.
+fi
+
+if [ -d "$cache/nvim" ]; then
+  mv -v "$cache/nvim" "$cache/nvim.bak"
+else
+  echo "$cache/nvim" does not exist.
+fi

@@ -1,0 +1,35 @@
+local o = vim.o
+local g = vim.g
+
+o.number = true
+o.relativenumber = true
+o.lazyredraw = true
+o.wrap = false
+o.foldenable = false
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.path:append("**")
+o.confirm = true
+o.ignorecase = true
+o.smartcase = true
+o.tabstop = 4
+o.shiftwidth = 4
+o.softtabstop = -1
+o.expandtab = true
+o.laststatus = 3
+o.termguicolors = true
+o.cursorline = true
+o.undofile = true
+o.backup = false
+o.swapfile = false
+o.scrolloff = 8
+o.mouse = "a"
+o.splitbelow = true
+o.splitright = true
+o.history = 50
+o.signcolumn = "yes"
+o.hlsearch = false
+o.guifont = "Jetbrainsmono nerd font:h15"
+
+g.mapleader = " "
+g.maplocalleader = " "
