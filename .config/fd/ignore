@@ -1,5 +1,4 @@
 .git/
-BAKUPS
 .tldr/
 .zoom/
 .eclipse/
@@ -26,5 +25,4 @@ BAKUPS
 .xsession-errors.old
 .mozilla/
 node_modules/
-neovim/
 snap/
