@@ -46,6 +46,8 @@ case "$PROG" in
 *.py)
 	python3 "$PROG"
 	;;
+*.go)
+    go run "$PROG"
 *.java)
 	JAVA "$PROG"
 	;;
