@@ -48,6 +48,7 @@ case "$PROG" in
 	;;
 *.go)
     go run "$PROG"
+    ;;
 *.java)
 	JAVA "$PROG"
 	;;
