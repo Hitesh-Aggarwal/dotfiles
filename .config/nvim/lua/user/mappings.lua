@@ -37,3 +37,7 @@ map("n", "<leader>p", '"+p')
 map("v", "<leader>p", '"+p')
 map("n", "<leader>P", '"+P')
 map("v", "<leader>P", '"+P')
+
+-- navigate between buffers
+map("n", "<C-n>", "<cmd>bnext<CR>")
+map("n", "<C-p>", "<cmd>bprevious<CR>")
