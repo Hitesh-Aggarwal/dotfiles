@@ -3,7 +3,7 @@ return {
   version = "*",
   config = function()
     require("toggleterm").setup({
-      size = 20,
+      size = 15,
       open_mapping = [[<A-i>]],
       autochdir = true,
       hide_numbers = true,
