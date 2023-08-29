@@ -1,9 +1,8 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
     priority = 1000,
-    config = function() vim.cmd.colorschem("catppuccin-macchiato") end,
+    config = function() vim.cmd.colorscheme("tokyonight-moon") end,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
