@@ -25,6 +25,7 @@ pathadd() {
 
 pathadd "$HOME/bin"
 pathadd "$HOME/.local/bin"
+pathadd "$HOME/Downloads/node-v18.17.1-linux-x64/bin"
 
 # if running bash source .bashrc
 if [ -n "$BASH_VERSION" ]; then
