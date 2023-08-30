@@ -14,14 +14,17 @@ return {
       require("mason").setup()
       require("neodev").setup()
       local stylua = require("efmls-configs.formatters.stylua")
-      local pretter_d = require("efmls-configs.formatters.prettier_d")
+      local prettier_d = {
+        formatCommand = 'prettierd "${INPUT}"',
+        formatStdin = true,
+      }
       local black = require("efmls-configs.formatters.black")
       local languages = {
         lua = { stylua },
-        html = { pretter_d },
-        css = { pretter_d },
-        javascript = { pretter_d },
-        typescript = { pretter_d },
+        html = { prettier_d },
+        css = { prettier_d },
+        javascript = { prettier_d },
+        typescript = { prettier_d },
         python = { black },
       }
 
