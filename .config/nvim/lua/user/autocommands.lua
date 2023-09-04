@@ -1,9 +1,9 @@
 -- autocommands
 vim.api.nvim_create_autocmd("BufWritePre", {
-  group = vim.api.nvim_create_augroup("trailing_whitespace", { clear = true }),
+  group = vim.api.nvim_create_augroup("Format_on_save", { clear = true }),
   pattern = "*",
-  command = "%s/\\s\\+$//e",
-  desc = "Removes trailing whitespace before writing file",
+  callback = require("user.plugins.lsp.format").format,
+  desc = "Formats the file before saving",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
