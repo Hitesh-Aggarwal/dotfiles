@@ -229,7 +229,8 @@ languages:
     # - <<: *javascript-eslint
     - <<: *prettierd
 
-  # json:
+  json:
+    - <<: *prettierd
   #   - <<: *json-fixjson
   #   - <<: *json-jq
     # - <<: *json-prettier
