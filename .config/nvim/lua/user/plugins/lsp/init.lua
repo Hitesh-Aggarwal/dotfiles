@@ -28,12 +28,6 @@ return {
         -- ["rust_analyzer"] = function()
         -- 	require("rust-tools").setup({})
         -- end,
-        ["efm"] = function()
-          require("lspconfig").efm.setup({
-            init_options = { documentFormatting = true },
-            capabilities = capabilities,
-          })
-        end,
       })
     end,
   },

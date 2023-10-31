@@ -1,10 +1,4 @@
 -- autocommands
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = vim.api.nvim_create_augroup("Format_on_save", { clear = true }),
-  pattern = "*",
-  callback = require("user.plugins.lsp.format").format,
-  desc = "Formats the file before saving",
-})
 
 vim.api.nvim_create_autocmd("FileType", {
   group = vim.api.nvim_create_augroup("no_newline_comment", { clear = true }),
