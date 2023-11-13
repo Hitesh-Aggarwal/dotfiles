@@ -28,6 +28,7 @@ return {
         -- ["rust_analyzer"] = function()
         -- 	require("rust-tools").setup({})
         -- end,
+        ["tsserver"] = function() end,
       })
     end,
   },
