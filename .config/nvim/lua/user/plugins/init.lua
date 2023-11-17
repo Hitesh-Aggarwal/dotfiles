@@ -16,5 +16,9 @@ return {
     tag = "legacy",
     config = true,
   },
+  {
+    "folke/todo-comments.nvim",
+    config = true,
+  },
   "jghauser/mkdir.nvim",
 }
