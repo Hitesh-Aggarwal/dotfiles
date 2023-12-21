@@ -55,6 +55,9 @@ case "$PROG" in
 *.js)
 	node "$PROG"
 	;;
+*.mjs)
+	node "$PROG"
+	;;
 *.lua)
 	lua "$PROG"
 	;;
