@@ -25,7 +25,11 @@ pathadd() {
 
 pathadd "$HOME/bin"
 pathadd "$HOME/.local/bin"
-pathadd "$HOME/Downloads/node-v20.9.0-linux-x64/bin"
+
+# fnm
+pathadd "$XDG_DATA_HOME/fnm"
+eval "`fnm env`"
+eval "`fnm completions --shell bash`"
 
 # if running bash source .bashrc
 if [ -n "$BASH_VERSION" ]; then
