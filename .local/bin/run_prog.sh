@@ -37,6 +37,9 @@ CPP() {
 }
 
 case "$PROG" in
+*.bash)
+	bash "$PROG"
+	;;
 *.c)
 	C "$PROG"
 	;;
@@ -64,8 +67,8 @@ case "$PROG" in
 *.sh)
 	bash "$PROG"
 	;;
-*.bash)
-	bash "$PROG"
+*.tex)
+	lualatex "$PROG"
 	;;
 *.zsh)
 	zsh "$PROG"
