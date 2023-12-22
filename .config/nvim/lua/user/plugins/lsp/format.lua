@@ -6,7 +6,6 @@ local deny_list = {
   jsonls = true,
   texlab = true,
   cssls = true,
-  html = true,
 }
 
 M.format = function()
