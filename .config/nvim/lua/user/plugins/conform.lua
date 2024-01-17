@@ -11,6 +11,7 @@ return {
         html = { "prettierd" },
         css = { "prettierd" },
         json = { "prettierd" },
+        yaml = { "prettierd" },
       },
 
       format_on_save = {
