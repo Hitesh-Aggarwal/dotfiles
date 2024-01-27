@@ -27,7 +27,7 @@ alias gm='yt-dlp -x'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 pcsv() {
-    batcat --color=always -pp "$1" | column -t -s,
+    batcat --line-range :$2 --color=always -pp "$1" | column -t -s,
 }
 
 p() {
