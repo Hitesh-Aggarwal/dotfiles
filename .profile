@@ -26,11 +26,6 @@ pathadd() {
 pathadd "$HOME/bin"
 pathadd "$HOME/.local/bin"
 
-# fnm
-pathadd "$XDG_DATA_HOME/fnm"
-eval "`fnm env`"
-eval "`fnm completions --shell bash`"
-
 # if running bash source .bashrc
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -38,3 +33,5 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
+
+if [ -e /home/hitesh/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hitesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
