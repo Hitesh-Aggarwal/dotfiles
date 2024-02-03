@@ -16,6 +16,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+# fix locale warning in nix applications
+export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
+
 # function that adds a directory to path if it is not already present.
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
