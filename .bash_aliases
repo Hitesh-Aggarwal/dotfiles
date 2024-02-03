@@ -16,8 +16,8 @@ alias vi='nvim --clean'
 alias vim='nvim'
 alias lg='lazygit'
 alias rm='rm -i'
-alias o='cd "$(fdfind --type d --color=never | fzf)"'
-alias h='cd "$(fdfind --type d --hidden --color=never | fzf)"'
+alias o='cd "$(fd --type d --color=never | fzf)"'
+alias h='cd "$(fd --type d --hidden --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
 alias gm='yt-dlp -x'
@@ -35,7 +35,7 @@ p() {
 }
 
 of() {
-    local var="$(fdfind --type f --color=never | fzf)"
+    local var="$(fd --type f --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else
@@ -44,7 +44,7 @@ of() {
 }
 
 hf() {
-    local var="$(fdfind --hidden --type f --color=never | fzf)"
+    local var="$(fd --hidden --type f --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else
