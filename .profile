@@ -26,6 +26,7 @@ pathadd() {
   fi
 }
 
+pathadd "/usr/sbin"
 pathadd "$HOME/bin"
 pathadd "$HOME/.local/bin"
 
