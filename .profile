@@ -19,6 +19,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # fix locale warning in nix applications
 export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
 
+# use bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # function that adds a directory to path if it is not already present.
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
