@@ -4,9 +4,6 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 
-# Run firefox natively on wayland.
-export MOZ_ENABLE_WAYLAND=1
-
 # Neovim as the editor
 export EDITOR='nvim'
 
@@ -16,12 +13,6 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# fix locale warning in nix applications
-export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
-
-# use bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 # function that adds a directory to path if it is not already present.
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
@@ -29,9 +20,11 @@ pathadd() {
   fi
 }
 
-pathadd "/usr/sbin"
-pathadd "$HOME/bin"
+# Add .local/bin to path
 pathadd "$HOME/.local/bin"
+
+# Add Nodejs to Path
+pathadd "$HOME/apps/node-v20.11.0-linux-x64/bin"
 
 # if running bash source .bashrc
 if [ -n "$BASH_VERSION" ]; then
@@ -40,5 +33,3 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
-
-if [ -e /home/hitesh/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hitesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
