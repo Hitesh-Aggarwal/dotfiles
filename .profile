@@ -1,17 +1,8 @@
-# XDG Base Directory Specification
-export XDG_CONFIG_HOME="$HOME"/.config
-export XDG_CACHE_HOME="$HOME"/.cache
-export XDG_DATA_HOME="$HOME"/.local/share
-export XDG_STATE_HOME="$HOME"/.local/state
-
 # Neovim as the editor
 export EDITOR='nvim'
 
 # Default options for fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # function that adds a directory to path if it is not already present.
 pathadd() {

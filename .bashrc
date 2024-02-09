@@ -13,7 +13,7 @@ esac
 HISTCONTROL=ignoreboth
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTFILE=$XDG_CACHE_HOME/bash_history
+HISTFILE=$HOME/.cache/bash_history
 HISTSIZE=10000
 HISTFILESIZE=50000
 
