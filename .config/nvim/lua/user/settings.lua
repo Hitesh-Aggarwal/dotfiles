@@ -26,10 +26,9 @@ o.scrolloff = 8
 o.mouse = "a"
 o.splitbelow = true
 o.splitright = true
-o.history = 50
 o.signcolumn = "yes"
 o.hlsearch = false
-o.guifont = "Jetbrainsmono nerd font:h15"
+o.guifont = "Ubuntu Mono:h16"
 
 g.mapleader = " "
 g.maplocalleader = " "
