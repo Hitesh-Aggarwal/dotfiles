@@ -41,3 +41,11 @@ fi
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+if [ -f $ZDOTDIR/catppuccin_macchiato-zsh-syntax-highlighting.zsh ]; then
+    . $ZDOTDIR/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+fi
+
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
