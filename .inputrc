@@ -3,7 +3,7 @@ set colored-completion-prefix on
 set colored-stats on
 set completion-ignore-case on
 set completion-map-case on
-set show-all-if-ambiguous on
-set show-all-if-unmodified on
+# set show-all-if-ambiguous on
+# set show-all-if-unmodified on
 "\e[A": history-substring-search-backward
 "\e[B": history-substring-search-forward
