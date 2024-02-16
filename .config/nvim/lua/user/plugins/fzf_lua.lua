@@ -40,14 +40,7 @@ return {
     })
 
     map("n", "<leader>fzf", require("fzf-lua").builtin)
-    map("n", "<leader>ff", function()
-      vim.fn.system("git rev-parse --is-inside-work-tree")
-      if vim.v.shell_error == 0 then
-        require("fzf-lua").git_files()
-      else
-        require("fzf-lua").files()
-      end
-    end)
+    map("n", "<leader>ff", require("fzf-lua").files)
     map("n", "<leader>fr", require("fzf-lua").live_grep)
     map("n", "<leader>fb", require("fzf-lua").buffers)
     map("n", "<leader>fo", require("fzf-lua").oldfiles)
