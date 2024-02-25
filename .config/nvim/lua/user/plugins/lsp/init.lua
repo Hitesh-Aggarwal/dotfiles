@@ -8,12 +8,12 @@ return {
     require("user.plugins.lsp.diagnostics")
     require("mason").setup()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    require("lspconfig").pyright.setup({
-      capabilities = capabilities,
-    })
-    require("lspconfig").clangd.setup({
-      capabilities = capabilities,
-    })
+    local servers = { "clangd", "pyright" }
+    for _, lsp in ipairs(servers) do
+      require("lspconfig")[lsp].setup({
+        capabilities = capabilities,
+      })
+    end
     require("lspconfig").lua_ls.setup({
       capabilities = capabilities,
       on_init = function(client)
