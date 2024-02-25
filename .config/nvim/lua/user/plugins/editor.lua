@@ -1,9 +1,8 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
-    config = function() vim.cmd.colorscheme("catppuccin-mocha") end,
+    config = function() vim.cmd.colorscheme("gruvbox") end,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
