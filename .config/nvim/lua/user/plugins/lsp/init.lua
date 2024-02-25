@@ -8,6 +8,9 @@ return {
     require("user.plugins.lsp.diagnostics")
     require("mason").setup()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    require("lspconfig").pyright.setup({
+      capabilities = capabilities,
+    })
     require("lspconfig").clangd.setup({
       capabilities = capabilities,
     })
