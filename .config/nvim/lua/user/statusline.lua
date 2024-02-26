@@ -84,8 +84,13 @@ local function filetype() return "%#User11#" .. string.format("%s", vim.bo.filet
 local function fileicon()
   local filename = vim.api.nvim_buf_get_name(0)
   local extension = vim.fn.fnamemodify(filename, ":e")
-  local icon = require("nvim-web-devicons").get_icon_color(filename, extension, { default = true })
-  return "%#User11#" .. icon .. " "
+  local icons_ok, icons = pcall(require, "nvim-web-devicons")
+  if not icons_ok then
+    return ""
+  else
+    local icon = icons.get_icon_color(filename, extension, { default = true })
+    return "%#User11#" .. icon .. " "
+  end
 end
 
 local function lineinfo()
