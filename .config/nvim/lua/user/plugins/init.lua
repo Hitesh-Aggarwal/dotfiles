@@ -19,5 +19,9 @@ return {
     "folke/todo-comments.nvim",
     config = true,
   },
+  {
+    "folke/trouble.nvim",
+    config = true,
+  },
   "jghauser/mkdir.nvim",
 }
