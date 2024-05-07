@@ -14,6 +14,7 @@ alias o='cd "$(fdfind --type d --color=never | fzf)"'
 alias h='cd "$(fdfind --type d --hidden --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
+alias bat='batcat'
 
 pcsv() {
     batcat --line-range :$2 --color=always -pp "$1" | column -t -s,
