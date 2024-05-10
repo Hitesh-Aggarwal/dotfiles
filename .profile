@@ -12,9 +12,6 @@ pathadd() {
 }
 
 pathadd "$HOME/.local/bin"
-pathadd "$HOME/apps/node-v20.12.2-linux-x64/bin"
-pathadd "$HOME/apps/nvim-linux64/bin"
-
 
 # if running bash source .bashrc
 if [ -n "$BASH_VERSION" ]; then

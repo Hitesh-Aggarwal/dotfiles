@@ -6,22 +6,21 @@ alias egrep='egrep --color=auto'
 alias tree='tree -C'
 alias ll='ls -al'
 alias diff='diff --color=auto'
-alias u='sudo apt update && sudo apt upgrade'
 alias vi='nvim --clean'
 alias vim='nvim'
 alias lg='lazygit'
-alias o='cd "$(fdfind --type d --color=never | fzf)"'
-alias h='cd "$(fdfind --type d --hidden --color=never | fzf)"'
+alias o='cd "$(fd --type d --color=never | fzf)"'
+alias h='cd "$(fd --type d --hidden --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
-alias bat='batcat'
+alias btop='btop --utf-force'
 
 pcsv() {
-    batcat --line-range :$2 --color=always -pp "$1" | column -t -s,
+    bat --line-range :$2 --color=always -pp "$1" | column -t -s,
 }
 
 of() {
-    local var="$(fdfind --type f --color=never | fzf)"
+    local var="$(fd --type f --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else
@@ -30,7 +29,7 @@ of() {
 }
 
 hf() {
-    local var="$(fdfind --hidden --type f --color=never | fzf)"
+    local var="$(fd --hidden --type f --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else

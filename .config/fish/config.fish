@@ -25,6 +25,7 @@ if status is-interactive
     alias h='cd "$(fdfind --type d --hidden --color=never | fzf)"'
     alias stow='stow --target=$HOME -v'
     alias mv='mv -i'
+    alias btop='btop --utf-force'
     alias bat='batcat'
     zoxide init fish | source
     fm6000 -r -c random
