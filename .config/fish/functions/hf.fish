@@ -1,5 +1,5 @@
 function of
-    set -l var (fdfind --hidden --type f --color=never | fzf)
+    set -l var (fd --hidden --type f --color=never | fzf)
     if file $var | rg -q 'text'
         $EDITOR $var
     else

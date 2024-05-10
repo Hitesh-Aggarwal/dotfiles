@@ -17,16 +17,14 @@ if status is-interactive
     alias tree='tree -C'
     alias ll='ls -al'
     alias diff='diff --color=auto'
-    alias u='sudo apt update && sudo apt upgrade'
     alias vi='nvim --clean'
     alias vim='nvim'
     alias lg='lazygit'
-    alias o='cd "$(fdfind --type d --color=never | fzf)"'
-    alias h='cd "$(fdfind --type d --hidden --color=never | fzf)"'
+    alias o='cd "$(fd --type d --color=never | fzf)"'
+    alias h='cd "$(fd --type d --hidden --color=never | fzf)"'
     alias stow='stow --target=$HOME -v'
     alias mv='mv -i'
     alias btop='btop --utf-force'
-    alias bat='batcat'
     zoxide init fish | source
     fm6000 -r -c random
 end
