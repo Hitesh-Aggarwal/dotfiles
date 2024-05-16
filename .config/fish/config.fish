@@ -25,6 +25,7 @@ if status is-interactive
     alias stow='stow --target=$HOME -v'
     alias mv='mv -i'
     alias btop='btop --utf-force'
+    abbr --add dotdot --regex '^\.\.+$' --function multicd
     zoxide init fish | source
     fm6000 -r -c random
 end
