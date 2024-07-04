@@ -8,7 +8,7 @@ return {
     require("user.plugins.lsp.diagnostics")
     require("mason").setup()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    local servers = { "clangd", "pyright" }
+    local servers = { "clangd", "pyright", "rust_analyzer" }
     for _, lsp in ipairs(servers) do
       require("lspconfig")[lsp].setup({
         capabilities = capabilities,

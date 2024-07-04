@@ -9,8 +9,8 @@ alias diff='diff --color=auto'
 alias vi='nvim --clean'
 alias vim='nvim'
 alias lg='lazygit'
-alias o='cd "$(fd --type d --color=never | fzf)"'
-alias h='cd "$(fd --type d --hidden --color=never | fzf)"'
+alias o='cd "$(fd --type d --follow --color=never | fzf)"'
+alias h='cd "$(fd --type d --hidden --follow --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
 alias btop='btop --utf-force'
@@ -20,7 +20,7 @@ pcsv() {
 }
 
 of() {
-    local var="$(fd --type f --color=never | fzf)"
+    local var="$(fd --type f --follow --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else
@@ -29,7 +29,7 @@ of() {
 }
 
 hf() {
-    local var="$(fd --hidden --type f --color=never | fzf)"
+    local var="$(fd --hidden --follow --type f --color=never | fzf)"
     if file "$var" | rg -q 'text'; then
         $EDITOR "$var"
     else
