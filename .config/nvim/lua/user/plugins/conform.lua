@@ -5,11 +5,11 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         python = { "black" },
-        javascript = { "prettierd" },
-        html = { "prettierd" },
-        css = { "prettierd" },
-        json = { "prettierd" },
-        yaml = { "prettierd" },
+        -- javascript = { "prettierd" },
+        -- html = { "prettierd" },
+        -- css = { "prettierd" },
+        -- json = { "prettierd" },
+        -- yaml = { "prettierd" },
       },
 
       format_on_save = {
