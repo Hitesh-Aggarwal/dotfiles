@@ -16,6 +16,15 @@ alias mv='mv -i'
 alias btop='btop --utf-force'
 alias open='xdg-open'
 
+
+encryptfile() {
+    gpg -a --symmetric --cipher-algo AES256 "$1"
+}
+
+decryptfile() {
+    gpg -a --output "${1%.asc}" --decrypt "$1"
+}
+
 pcsv() {
     bat --line-range :$2 --color=always -pp "$1" | column -t -s,
 }

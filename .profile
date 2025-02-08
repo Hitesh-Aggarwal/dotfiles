@@ -1,7 +1,3 @@
-# Neovim as the editor
-export EDITOR='nvim'
-export BAT_THEME='gruvbox-dark'
-# Default options for fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # function that adds a directory to path if it is not already present.
