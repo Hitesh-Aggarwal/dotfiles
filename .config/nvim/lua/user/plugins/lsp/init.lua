@@ -14,6 +14,12 @@ return {
         capabilities = capabilities,
       })
     end
+    require("lspconfig").beancount.setup({
+      capabilities = capabilities,
+      init_options = {
+        journal_file = "~/main.beancount",
+      },
+    })
     require("lspconfig").lua_ls.setup({
       capabilities = capabilities,
       on_init = function(client)
