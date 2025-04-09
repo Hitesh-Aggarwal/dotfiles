@@ -1,8 +1,20 @@
+# XDG paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_STATE_HOME=$HOME/.local/state
+
 # Neovim as the editor
 export EDITOR='nvim'
-export BAT_THEME='gruvbox-dark'
+
+# Set bat theme
+export BAT_THEME="Catppuccin Mocha"
+
 # Default options for fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# Change Inputrc location
+export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
 # function that adds a directory to path if it is not already present.
 pathadd() {

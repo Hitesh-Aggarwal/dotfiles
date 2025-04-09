@@ -15,6 +15,7 @@ alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
 alias btop='btop --utf-force'
 alias open='xdg-open'
+alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 
 pcsv() {
     bat --line-range :$2 --color=always -pp "$1" | column -t -s,
