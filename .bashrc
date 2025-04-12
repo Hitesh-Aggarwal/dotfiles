@@ -46,6 +46,7 @@ fi
 stty -ixon
 
 # Set the prompt
-PS1='\[\e[91;1m\][\[\e[93m\]\u\[\e[22m\]@\[\e[96;1m\]\h\[\e[0m\] \[\e[95m\]\w\[\e[91;1m\]]\[\e[0m\]\$ '
+eval "$(starship init bash)"
 
 eval "$(zoxide init bash)"
+. "$HOME/.cargo/env"
