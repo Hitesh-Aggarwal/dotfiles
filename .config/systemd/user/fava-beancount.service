@@ -1,0 +1,10 @@
+[Unit]
+Description=Fava: gui for beancount
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/home/hitesh/.local/bin/fava_beancount.sh
+
+[Install]
+WantedBy=default.target
