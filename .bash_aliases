@@ -13,7 +13,6 @@ alias o='cd "$(fd --type d --follow --color=never | fzf)"'
 alias h='cd "$(fd --type d --hidden --follow --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
-alias btop='btop --utf-force'
 alias open='xdg-open'
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 
