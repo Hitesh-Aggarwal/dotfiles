@@ -15,6 +15,7 @@ alias stow='stow --target=${HOME} -v'
 alias mv='mv -i'
 alias open='xdg-open'
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+alias scan_qr='grim -g "$(slurp)" - | qrtool decode'
 
 pcsv() {
     bat --line-range :$2 --color=always -pp "$1" | column -t -s,
