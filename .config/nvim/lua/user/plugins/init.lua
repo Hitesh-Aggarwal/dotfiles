@@ -1,5 +1,11 @@
 return {
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function() vim.cmd.colorscheme("catppuccin-mocha") end,
+  },
+  {
     "windwp/nvim-autopairs",
     config = true,
   },
@@ -9,18 +15,6 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
-    config = true,
-  },
-  {
-    "j-hui/fidget.nvim",
-    config = true,
-  },
-  {
-    "folke/todo-comments.nvim",
-    config = true,
-  },
-  {
-    "folke/trouble.nvim",
     config = true,
   },
   "jghauser/mkdir.nvim",

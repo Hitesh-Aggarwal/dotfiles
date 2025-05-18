@@ -1,15 +1,8 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
-    "neovim/nvim-lspconfig",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "hrsh7th/cmp-nvim-lsp-signature-help",
-    "rafamadriz/friendly-snippets",
-    "onsails/lspkind.nvim",
   },
   config = function()
     local cmp = require("cmp")
@@ -24,16 +17,7 @@ return {
       vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
     end
 
-    local lspkind = require("lspkind")
-
     cmp.setup({
-      snippet = {
-        -- REQUIRED - you must specify a snippet engine
-        expand = function(args) vim.fn["vsnip#anonymous"](args.body) end,
-      },
-      formatting = {
-        format = lspkind.cmp_format(),
-      },
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -61,12 +45,8 @@ return {
         end, { "i", "s" }),
       }),
       sources = cmp.config.sources({
-        { name = "supermaven" },
-        { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "path" },
-        { name = "vsnip" }, -- For vsnip users.
-        { name = "nvim_lsp_signature_help" },
       }),
     })
   end,

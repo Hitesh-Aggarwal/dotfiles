@@ -29,14 +29,6 @@ map("n", "<m-k>", ":m .-2<CR>==")
 
 -- Copy and paste
 map("x", "p", '"_dP')
-map("n", "<leader>y", '"+y')
-map("v", "<leader>y", '"+y')
-map("n", "<leader>Y", '"+Y')
-map("v", "<leader>Y", '"+Y')
-map("n", "<leader>p", '"+p')
-map("v", "<leader>p", '"+p')
-map("n", "<leader>P", '"+P')
-map("v", "<leader>P", '"+P')
 
 -- navigate between buffers
 map("n", "<C-n>", "<cmd>bnext<CR>")
