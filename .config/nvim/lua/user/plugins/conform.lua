@@ -4,8 +4,7 @@ return {
     require("conform").setup({
       formatters_by_ft = {
         lua = { "stylua" },
-        python = { "black" },
-        beancount = { "bean-format" },
+        -- python = { "black" },
         -- javascript = { "prettierd" },
         -- html = { "prettierd" },
         -- css = { "prettierd" },
