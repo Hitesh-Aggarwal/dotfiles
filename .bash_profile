@@ -8,7 +8,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 export EDITOR='nvim'
 
 # Set bat theme
-export BAT_THEME="Catppuccin Mocha"
+export BAT_THEME="OneHalfDark"
 
 # Default options for fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
