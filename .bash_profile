@@ -16,6 +16,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # Change Inputrc location
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
+# Ledger file
+export LEDGER_FILE="$HOME/ledger/ledger.ldg"
+
 # function that adds a directory to path if it is not already present.
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
