@@ -4,7 +4,8 @@ return {
     dependencies = {
       "https://gitlab.com/HiPhish/rainbow-delimiters.nvim",
     },
-    build = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
+    build = ":TSUpdate",
+    lazy = false,
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = { "lua" },
