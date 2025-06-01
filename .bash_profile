@@ -7,8 +7,10 @@ export XDG_STATE_HOME=$HOME/.local/state
 # Neovim as the editor
 export EDITOR='nvim'
 
-# Set bat theme
+# Set bat theme and set bat as manpager
 export BAT_THEME="OneHalfDark"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 # Default options for fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
