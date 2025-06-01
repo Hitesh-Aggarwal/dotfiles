@@ -1,2 +1,4 @@
 .luarc.json
 lazy-lock.json
+
+lua/user/lsp_servers.lua
