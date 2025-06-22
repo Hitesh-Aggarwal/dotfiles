@@ -1,15 +1,9 @@
 return {
   {
-    "olimorris/onedarkpro.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000, -- Ensure it loads first
-    config = function()
-      require("onedarkpro").setup({
-        options = {
-          cursorline = true,
-        },
-      })
-      vim.cmd.colorscheme("onedark")
-    end,
+    config = function() vim.cmd.colorscheme("catppuccin-mocha") end,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
