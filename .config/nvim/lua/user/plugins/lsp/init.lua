@@ -10,11 +10,12 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local servers = require("user.lsp_servers").default_servers
     for _, lsp in ipairs(servers) do
-      require("lspconfig")[lsp].setup({
+      vim.lsp.config(lsp, {
         capabilities = capabilities,
       })
+      vim.lsp.enable(lsp)
     end
-    require("lspconfig").lua_ls.setup({
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
       on_init = function(client)
         local path = client.workspace_folders[1].name
@@ -37,5 +38,6 @@ return {
         Lua = {},
       },
     })
+    vim.lsp.enable("lua_ls")
   end,
 }
