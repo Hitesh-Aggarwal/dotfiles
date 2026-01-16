@@ -12,8 +12,8 @@ vim.opt.path:append("**")
 o.confirm = true
 o.ignorecase = true
 o.smartcase = true
-o.tabstop = 4
-o.shiftwidth = 4
+o.tabstop = 2
+o.shiftwidth = 2
 o.softtabstop = -1
 o.expandtab = true
 o.laststatus = 3
@@ -28,7 +28,7 @@ o.splitbelow = true
 o.splitright = true
 o.signcolumn = "yes"
 o.hlsearch = false
-o.guifont = "Ubuntu Mono:h16"
+o.colorcolumn = "80"
 
 g.mapleader = " "
 g.maplocalleader = " "
