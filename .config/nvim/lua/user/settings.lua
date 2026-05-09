@@ -25,7 +25,7 @@ o.splitbelow = true
 o.splitright = true
 o.signcolumn = "yes"
 o.hlsearch = false
-o.colorcolumn = "80"
+o.colorcolumn = "80,120"
 
 g.mapleader = " "
 g.maplocalleader = " "

@@ -14,7 +14,7 @@ vim.pack.add({
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/Bekaboo/dropbar.nvim",
-	"https://github.com/norcalli/nvim-colorizer.lua",
+	"https://github.com/catgoose/nvim-colorizer.lua",
 	"https://github.com/mbbill/undotree",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/ibhagwan/fzf-lua",
