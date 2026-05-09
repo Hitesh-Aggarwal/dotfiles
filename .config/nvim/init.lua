@@ -1,18 +1,44 @@
 require("user.settings")
--- Automatically install lazy
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.uv.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup("user.plugins")
-require("user.mappings")
 require("user.autocommands")
+require("user.mappings")
+
+vim.pack.add({
+	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+	"https://github.com/windwp/nvim-autopairs",
+	"https://github.com/numToStr/Comment.nvim",
+	"https://github.com/lewis6991/gitsigns.nvim",
+	"https://github.com/j-hui/fidget.nvim",
+	"https://github.com/folke/todo-comments.nvim",
+	"https://github.com/folke/trouble.nvim",
+	"https://github.com/jghauser/mkdir.nvim",
+	"https://github.com/lukas-reineke/indent-blankline.nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/Bekaboo/dropbar.nvim",
+	"https://github.com/norcalli/nvim-colorizer.lua",
+	"https://github.com/mbbill/undotree",
+	"https://github.com/stevearc/conform.nvim",
+	"https://github.com/ibhagwan/fzf-lua",
+	"https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/hrsh7th/nvim-cmp",
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/hrsh7th/cmp-nvim-lsp",
+	"https://github.com/hrsh7th/cmp-vsnip",
+	"https://github.com/hrsh7th/vim-vsnip",
+	"https://github.com/hrsh7th/cmp-buffer",
+	"https://github.com/hrsh7th/cmp-path",
+	"https://github.com/hrsh7th/cmp-nvim-lsp-signature-help",
+	"https://github.com/rafamadriz/friendly-snippets",
+	"https://github.com/onsails/lspkind.nvim",
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/williamboman/mason.nvim",
+})
+
+require("user.plugins")
+require("user.plugins.conform")
+require("user.plugins.fzf_lua")
+require("user.plugins.lualine")
+require("user.plugins.cmp")
+require("user.plugins.lsp")
+require("user.plugins.undotree")
+
+vim.cmd.colorscheme("catppuccin-mocha")
