@@ -8,7 +8,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 export EDITOR='nvim'
 
 # Set bat theme and set bat as manpager
-export BAT_THEME="OneHalfDark"
+export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
@@ -23,19 +23,5 @@ export LEDGER_FILE="$HOME/ledger/ledger.ldg"
 export LEDGER_STRICT=1
 export LEDGER_PEDANTIC=1
 
-# function that adds a directory to path if it is not already present.
-pathadd() {
-  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-    PATH="$1${PATH:+":$PATH"}"
-  fi
-}
-
-pathadd "$HOME/.local/bin"
-
-# if running bash source .bashrc
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+# Path
+export PATH="$HOME/.local/bin:$PATH"

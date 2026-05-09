@@ -1,14 +1,11 @@
-# enable color support of ls and also add handy aliases
+# Enable color support of ls and also add handy aliases
 alias ls='eza --group-directories-first --icons'
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias tree='tree -C'
 alias ll='ls -al'
 alias diff='diff --color=auto'
 alias vi='nvim --clean'
 alias vim='nvim'
-alias lg='lazygit'
 alias o='cd "$(fd --type d --follow --color=never | fzf)"'
 alias h='cd "$(fd --type d --hidden --follow --color=never | fzf)"'
 alias stow='stow --target=${HOME} -v'
