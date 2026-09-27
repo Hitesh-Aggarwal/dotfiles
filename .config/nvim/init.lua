@@ -25,6 +25,7 @@ vim.pack.add({
 	"https://github.com/numToStr/Comment.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
 	"https://github.com/onsails/lspkind.nvim",
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/stevearc/conform.nvim",
