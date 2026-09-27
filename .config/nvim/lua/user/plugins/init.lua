@@ -4,9 +4,10 @@ require("todo-comments").setup()
 require("trouble").setup()
 require("ibl").setup()
 
-require("colorizer").setup({
-	"*",
-	css = { css = true },
-	html = { css = true },
-	javascript = { css = true },
-})
+require("user.plugins.colorizer")
+require("user.plugins.conform")
+require("user.plugins.fzf_lua")
+require("user.plugins.lualine")
+require("user.plugins.cmp")
+require("user.plugins.lsp")
+require("user.plugins.undotree")
